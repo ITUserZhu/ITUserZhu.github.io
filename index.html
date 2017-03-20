@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-first-paper" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/03/20/first-paper/" class="article-date">
+  <time datetime="2017-03-20T06:18:06.000Z" itemprop="datePublished">2017-03-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/20/first-paper/">first paper</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="笔记"><a href="#笔记" class="headerlink" title="笔记"></a>笔记</h1><h2 id="node-笔记第一天"><a href="#node-笔记第一天" class="headerlink" title="node 笔记第一天"></a>node 笔记第一天</h2><ul>
+<li>Node 是一个可以解析和执行js的一个运行时(运行环境)</li>
+<li>Node 不同于浏览器,不再关心GUI图形界面,专注于数据处理<ul>
+<li>文件中的数据</li>
+<li>网络中的数据</li>
+<li>数据库中的数据</li>
+<li>网络服务</li>
+</ul>
+</li>
+<li><p>Node 特点:</p>
+<ul>
+<li><ol>
+<li>Event drivern 事件驱动</li>
+</ol>
+</li>
+<li><ol>
+<li>非阻塞IO模型(异步编程模型)</li>
+</ol>
+</li>
+<li><ol>
+<li>单线程</li>
+</ol>
+</li>
+<li><ol>
+<li>跨平台</li>
+</ol>
+</li>
+<li><ol>
+<li>轻量高效</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>path 环境变量</p>
+<ul>
+<li>将可执行文件所属绝对路径以’英文分号’作为分隔符添加到path环境变量中</li>
+<li>在环境变量中田间一个变量名(大写程序名_HOME),变量值为可执行文件所属绝对路径<ul>
+<li>然后在Path环境中以英文分号作为分割使用 <code>%变量名%</code> 来对你的变量进行引用</li>
+<li>这种方式好处就是方便维护</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Node 中的JavaScript</p>
+<ul>
+<li>Ecmascript<ul>
+<li>if /else / var / function…</li>
+<li>Date / Math …</li>
+</ul>
+</li>
+<li>Console</li>
+<li>setTimeout clearTimeout</li>
+<li>setInterval claerInterval</li>
+<li>Node内置核心模块<ul>
+<li>作用: 每一个核心模块都专注于处理某个功能.如fs模块专注于文件操作</li>
+<li>使用方式: 所有的核心模块都提供了一系列的API共你调用.第一步必须先调用 require</li>
+<li>例如 <code>var fs = require(fs)</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>文件操作</p>
+<ul>
+<li>读取文件 readFile</li>
+<li>写入文件 writeFile</li>
+<li>监视文件 watchFile</li>
+<li>读取目录 readdir 读取的是文件名和目录名称</li>
+</ul>
+</li>
+<li><p>http</p>
+<ul>
+<li><ol>
+<li>搭建一个能响应 hello world 的服务</li>
+</ol>
+</li>
+<li><ol>
+<li>搭建一个根据不同URL响应不同的内容(写死的字符串)</li>
+</ol>
+</li>
+<li><ol>
+<li>搭建一个能根据不同URL响应不同文件</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="node-第二天"><a href="#node-第二天" class="headerlink" title="node 第二天"></a>node 第二天</h2><h2 id="在Node-中使用模版引擎"><a href="#在Node-中使用模版引擎" class="headerlink" title="在Node 中使用模版引擎"></a>在Node 中使用模版引擎</h2><ul>
+<li>模版引擎与DOM对象没有关系</li>
+</ul>
+<h2 id="http-server"><a href="#http-server" class="headerlink" title="http-server"></a>http-server</h2><ul>
+<li>它是基于Node 开发的一个全局命令行工具,可以快速托管你的静态资源</li>
+<li><p>第一步: 安装</p>
+<pre><code>npm i -g http-server
+npm install --global http-server
+</code></pre></li>
+</ul>
+<ul>
+<li><p>第二步: 基本使用</p>
+</li>
+<li><p>卸载 http-server</p>
+<pre><code>npm unistall --global http-server
+</code></pre></li>
+</ul>
+<h2 id="模块化"><a href="#模块化" class="headerlink" title="模块化"></a>模块化</h2><ul>
+<li>在Node 中,为每一个文件都提供了一个require 函数</li>
+<li>没一个文件模块都是一个单独的私有作用域</li>
+<li>如果想要在一个模块中向外导出一些被别人访问的成员: 通过:module.exports向外导出,没一个模块都有一个对象: module.exports,默认是一个空对象</li>
+<li><p>require 函数的作用:用来加载文件模块</p>
+<pre><code>* 内置模块: 例如 fs / http
+* 第三方: art-template / marked...
+</code></pre></li>
+<li><p>require 函数的第一个作用</p>
+<pre><code>* 执行被加载模块中的代码
+* 得到被加载模块中导出的接口对象
+</code></pre></li>
+</ul>
+<hr>
+<h2 id="node-第三天"><a href="#node-第三天" class="headerlink" title="node 第三天"></a>node 第三天</h2><ul>
+<li><p>异步编程思维</p>
+<ul>
+<li>清楚理解异步代码的执行过程</li>
+<li>能做到封装一个函数（内部由异步操作产生该函数的结果）</li>
+<li>所有的异步操作都在普通操作完成之后才会执行</li>
+<li>所有函数中通过异步操作得到的结果一定是通过callback回调函数来获取<ul>
+<li>上层定义</li>
+<li>下层调用</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>模块天生就是一个私有作用域,外部拿不到</p>
+</li>
+<li>对于同一个模块,被多次加载,会被缓存起来,以后再加载就直接读取缓存结果</li>
+<li>加载过的模块的导出接口会被放到缓存中</li>
+<li>模块的加载执行顺序,取决于require函数出现的位置</li>
+</ul>
+<h2 id="npm常用命令"><a href="#npm常用命令" class="headerlink" title="npm常用命令"></a>npm常用命令</h2><ul>
+<li>npm–help 查看 npm 工具使用帮助</li>
+<li>npm–version 查看版本<ul>
+<li>npm –global npm 升级版本</li>
+</ul>
+</li>
+<li>npm 需要查看的工具 -h  查看工具的使用帮助</li>
+<li><p>npm uninstall [–save] 卸载当前项目中某个包</p>
+</li>
+<li><p>安装全局命令行工具</p>
+<ul>
+<li>在node 中,还有一种包比较特殊,这种包被称为全局命令行工具,这种不是用在项目中辅助调用的,而是提供一个工具供你在终端使用</li>
+</ul>
+</li>
+</ul>
+<pre><code>`npm install --global http-server`
+</code></pre><ul>
+<li>nrm 多镜像缘切换<ul>
+<li>安装 npm install –global nrm</li>
+</ul>
+</li>
+</ul>
+<h2 id="自动同步修改代码重启服务器-nodemon"><a href="#自动同步修改代码重启服务器-nodemon" class="headerlink" title="自动同步修改代码重启服务器 nodemon"></a>自动同步修改代码重启服务器 nodemon</h2><p>第一:安装</p>
+<p><code>npm i -g nodemon</code></p>
+<p>第二: 使用</p>
+<p><code>node app.js 通过 nodemon app.js</code></p>
+<hr>
+<h2 id="node-第四天"><a href="#node-第四天" class="headerlink" title="node 第四天"></a>node 第四天</h2><p>res.writeHead(200,{<br>    ‘Content-Type’: ‘text/html; charset=utf-8’<br>})</p>
+<p>文件操作路径</p>
+<ul>
+<li><p>在文件操作中,绝对路径无非就是两种形式:</p>
+<ul>
+<li>c:/a/b/a.txt 绝对路径</li>
+<li>a/b/a.txt  相对路径</li>
+</ul>
+</li>
+<li><p>相对路径</p>
+<ul>
+<li>./data/a.txt  这里的相对路径表示在哪里执行Node命令,相对路径就相对于谁</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>filenmae 和 </strong>dirname</p>
+<ul>
+<li>__filenmae永远获取到的都是当前文件的绝对路径</li>
+<li><p>__dirname永远获取到的都是当前文件所属目录的绝对路径</p>
+<p><code>__dirname + &#39;\\data.txt&#39;</code></p>
+</li>
+</ul>
+</li>
+<li><p>在windows上 ,路径分隔是反斜杠:\</p>
+</li>
+<li><p>可以利用path.sep属性获取当前操作系统的路径分隔符</p>
+<ul>
+<li>path.join(__dirname,’../a.txt’) 将多个字符串拼接完整的路径 ‘../‘代表进入上一级</li>
+<li>path.basename 获取有后缀名的文件</li>
+<li>path.dirname 获取第一个路径的目录部分</li>
+<li>path.normalize(path) 将一个非标准路径转换成标准路径</li>
+<li>path.resolve([…path])  将一个路径转为动态的绝对路径,但是转出来的绝对路径还是相对于Node执行命令的终端位置</li>
+<li><p>path.parse(‘c:\paht\file.txt’) 路径转为对象</p>
+<ul>
+<li>对应path.format({})</li>
+</ul>
+</li>
+<li><p>在node操作路径的时候,可以使用正斜杠作为路径操作符,因为Node在真正处理文件资源的时候,会自动转换</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="web路径"><a href="#web路径" class="headerlink" title="web路径"></a>web路径</h2><p>永远相对于当前页面的url路径 , url只是个标识, 关键在于html页面中的资源引用路径到底相对于什么<br>在 web 中,一切页面中的资源请求路径都相对于当前使用这个页面的</p>
+<ul>
+<li>link href </li>
+<li>img src </li>
+<li><p>script src </p>
+</li>
+<li><p>iframe href</p>
+</li>
+<li><p>a href</p>
+</li>
+</ul>
+<h2 id="post-请求-node中获取数据"><a href="#post-请求-node中获取数据" class="headerlink" title="post 请求 node中获取数据"></a>post 请求 node中获取数据</h2><ul>
+<li><p>querystring.parse(data)  把查询字符串转换成对象</p>
+<ul>
+<li>参数传入: data = ‘name=aa&amp;age=18’</li>
+</ul>
+</li>
+<li><p>将表单的enctype 设置为multipart/form-data</p>
+</li>
+</ul>
+<p>awesome-名字  git搜索常用的插件</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/03/20/first-paper/" data-id="cj0hq1t8s0000aknu733r2tub" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/03/20/hello-world/" class="article-date">
+  <time datetime="2017-03-20T04:26:26.361Z" itemprop="datePublished">2017-03-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/20/hello-world/">Hello World</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/03/20/hello-world/" data-id="cj0hq1t8y0001aknumjnbltp1" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/03/20/first-paper/">first paper</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/20/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
