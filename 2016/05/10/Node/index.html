@@ -6,24 +6,36 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Express的使用 | IT-Z前端之路</title>
+  <title>node学习 | IT-Z前端之路</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="基础+中间件
-数据库
-使用node操作数据">
+  <meta name="description" content="Node 是一个可以解析和执行js的一个运行时(运行环境)Node 不同于浏览器,不再关心GUI图形界面,专注于数据处理
+
+
+文件中的数据
+网络中的数据
+数据库中的数据
+网络服务">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Express的使用">
-<meta property="og:url" content="http://yoursite.com/2015/07/22/Express/index.html">
+<meta property="og:title" content="node学习">
+<meta property="og:url" content="http://yoursite.com/2016/05/10/Node/index.html">
 <meta property="og:site_name" content="IT-Z前端之路">
-<meta property="og:description" content="基础+中间件
-数据库
-使用node操作数据">
-<meta property="og:updated_time" content="2017-03-22T12:25:28.463Z">
+<meta property="og:description" content="Node 是一个可以解析和执行js的一个运行时(运行环境)Node 不同于浏览器,不再关心GUI图形界面,专注于数据处理
+
+
+文件中的数据
+网络中的数据
+数据库中的数据
+网络服务">
+<meta property="og:updated_time" content="2017-03-22T13:42:40.655Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Express的使用">
-<meta name="twitter:description" content="基础+中间件
-数据库
-使用node操作数据">
+<meta name="twitter:title" content="node学习">
+<meta name="twitter:description" content="Node 是一个可以解析和执行js的一个运行时(运行环境)Node 不同于浏览器,不再关心GUI图形界面,专注于数据处理
+
+
+文件中的数据
+网络中的数据
+数据库中的数据
+网络服务">
   
     <link rel="alternative" href="/atom.xml" title="IT-Z前端之路" type="application/atom+xml">
   
@@ -166,135 +178,220 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Express" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Node" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Express的使用
+      node学习
     </h1>
   
 
         
-        <a href="/2015/07/22/Express/" class="archive-article-date">
-  	<time datetime="2015-07-22T07:08:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-07-22</time>
+        <a href="/2016/05/10/Node/" class="archive-article-date">
+  	<time datetime="2016-05-10T09:12:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-05-10</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ul>
-<li>基础+中间件</li>
-<li>数据库</li>
-<li>使用node操作数据</li>
+        <p>Node 是一个可以解析和执行js的一个运行时(运行环境)<br>Node 不同于浏览器,不再关心GUI图形界面,专注于数据处理</p>
+<blockquote>
+<ul>
+<li>文件中的数据</li>
+<li>网络中的数据</li>
+<li>数据库中的数据</li>
+<li>网络服务</li>
 </ul>
+</blockquote>
 <a id="more"></a>
+<p>Node 特点:</p>
+<blockquote>
+<ul>
+<li><ol>
+<li>Event drivern 事件驱动</li>
+</ol>
+</li>
+<li><ol>
+<li>非阻塞IO模型(异步编程模型)</li>
+</ol>
+</li>
+<li><ol>
+<li>单线程</li>
+</ol>
+</li>
+<li><ol>
+<li>跨平台</li>
+</ol>
+</li>
+<li><ol>
+<li>轻量高效</li>
+</ol>
+</li>
+</ul>
+</blockquote>
+<p>path 环境变量</p>
+<ul>
+<li>将可执行文件所属绝对路径以’英文分号’作为分隔符添加到path环境变量中</li>
+<li><p>在环境变量中田间一个变量名(大写程序名_HOME),变量值为可执行文件所属绝对路径</p>
+<ul>
+<li>然后在Path环境中以英文分号作为分割使用 <code>%变量名%</code> 来对你的变量进行引用</li>
+<li>这种方式好处就是方便维护</li>
+</ul>
+</li>
+<li><p>Node 中的JavaScript</p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">Ecmascript</div><div class="line">	 <span class="keyword">if</span> /<span class="keyword">else</span> / <span class="keyword">var</span> / <span class="function"><span class="keyword">function</span>...</span></div><div class="line">	 <span class="title">Date</span> / <span class="title">Math</span> ...</div><div class="line"><span class="title">Console</span></div><div class="line"><span class="title">setTimeout</span> <span class="title">clearTimeout</span></div><div class="line"><span class="title">setInterval</span> <span class="title">claerInterval</span></div></pre></td></tr></table></figure>
+<ul>
+<li>Node内置核心模块<ul>
+<li>作用: 每一个核心模块都专注于处理某个功能.如fs模块专注于文件操作</li>
+<li>使用方式: 所有的核心模块都提供了一系列的API共你调用.第一步必须先调用 require</li>
+<li>例如 <code>var fs = require(fs)</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>文件操作</p>
+<blockquote>
+<ul>
+<li>读取文件 readFile</li>
+<li>写入文件 writeFile</li>
+<li>监视文件 watchFile</li>
+<li>读取目录 readdir 读取的是文件名和目录名称</li>
+</ul>
+</blockquote>
+<p>http</p>
+<blockquote>
+<ol>
+<li>搭建一个能响应 hello world 的服务</li>
+<li>搭建一个根据不同URL响应不同的内容(写死的字符串)</li>
+<li>搭建一个能根据不同URL响应不同文件</li>
+</ol>
+</blockquote>
 <hr>
-<ul>
-<li>Express 一个基于Nodejs快速web开发框架<ul>
-<li>做网站后台</li>
+<h2 id="在Node-中使用模版引擎"><a href="#在Node-中使用模版引擎" class="headerlink" title="在Node 中使用模版引擎"></a>在Node 中使用模版引擎</h2><ul>
+<li>模版引擎与DOM对象没有关系</li>
 </ul>
+<h2 id="http-server"><a href="#http-server" class="headerlink" title="http-server"></a>http-server</h2><p>它是基于Node 开发的一个全局命令行工具,可以快速托管你的静态资源</p>
+<ol>
+<li>第一步: 安装</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm i -g http-server</div><div class="line">npm install --global http-server</div></pre></td></tr></table></figure>
+<p>卸载 http-server<br><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">npm</span> unistall --<span class="built_in">global</span> http-server</div></pre></td></tr></table></figure></p>
+<h2 id="模块化"><a href="#模块化" class="headerlink" title="模块化"></a>模块化</h2><ul>
+<li>在Node 中,为每一个文件都提供了一个require 函数</li>
+<li>没一个文件模块都是一个单独的私有作用域</li>
+<li>如果想要在一个模块中向外导出一些被别人访问的成员: 通过:module.exports向外导出,没一个模块都有一个对象: module.exports,默认是一个空对象</li>
+<li><p>require 函数的作用:用来加载文件模块</p>
+<pre><code>内置模块: 例如 fs / http
+第三方: art-template / marked...
+</code></pre></li>
+<li><p>require 函数的第一个作用</p>
 </li>
 </ul>
-<ul>
-<li><p>中间件</p>
-<ul>
-<li>express 核心就是面向中间件编程</li>
-<li>app.use(function(req,res){//handle})中间件: 任意请求都会进来,不关心请求路径和请求方法</li>
-<li>app.use(route,function(req,res){//handle})中间件:只有该请求路径开头的才会进来执行<br>+app.get(‘请求路径’,function(req,res){})只有以get请求 第一个参数:请求路径<br>+app.post(‘请求路径’,function(req,res){})只有以post请求 第一个参数:请求路径</li>
-</ul>
-</li>
-<li><p>对于同一次请求,流通多个中间件都是同一个req,res对象    </p>
-</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">app.use(<span class="function"><span class="keyword">function</span>(<span class="params">req,res,next</span>)</span>&#123;</div><div class="line">	<span class="built_in">console</span>.log(<span class="number">11</span>)</div><div class="line">	next()</div><div class="line">&#125;)</div><div class="line"><span class="comment">//调用next()才会执行下一个被匹配的中间件</span></div><div class="line">app.use(<span class="function"><span class="keyword">function</span>(<span class="params">req,res</span>) </span>&#123;</div><div class="line">	<span class="built_in">console</span>.log(<span class="number">222</span>)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<h2 id="API"><a href="#API" class="headerlink" title="API"></a>API</h2><p><strong>1.express</strong> </p>
-<ul>
-<li>express()  得到一个实例app</li>
-<li>express.static()  方便地托管静态文件唯一中间件</li>
-<li>express.Router()    可使用 express.Router 类创建模块化、可挂载的路由句柄</li>
-</ul>
-<p><strong>2.Application</strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">app.get() </div><div class="line">app.post()</div></pre></td></tr></table></figure>
-<ul>
-<li>设置路由</li>
-<li>通过 app 调用对应的 get 或 post 方法</li>
-<li>根据不同的请求方法 + 请求路径，转发到具体的处理函数</li>
-<li>这里的路由中的第一个参数需要传入一个字符换：请求路径（pathname，不包含查询字符串）</li>
-<li>请求处理函数需要接收两个参数：req 和 res</li>
-<li>req：请求对象</li>
-<li>可以通过请求对象获取一些客户端的请求数据，例如请求 URL、请求方法、请求查询字符串 等数据</li>
-<li>req 也是在原来的基础之上，扩展添加了一些有用的方法或属性</li>
-<li>例如：req.query  res：响应对象</li>
-<li>可以给客户端发送响应数据</li>
-<li>Express 在基于原来的 res 基础之又提供了一些快捷便利的方法</li>
-<li>例如：res.redirect()</li>
-</ul>
-<ul>
-<li>app.listen() 监听 端口,启动服务器</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">app.use(function (req, res) &#123; // handle &#125;)</div><div class="line">//中间件：任何请求都会进来，不关心请求路径和请求方法</div><div class="line">app.use(&apos;请求路径&apos;, function (req, res) &#123; // handle &#125;) </div><div class="line">//中间件：只有该请求路径开头的才会进来执行</div><div class="line">app.get(&apos;请求路径&apos;, function (req, res) &#123; // handle &#125;) </div><div class="line">//只有以 get 请求 第一个参数：请求路径的时候才会进来</div><div class="line">app.post(&apos;请求路径&apos;, function (req, res) &#123; // handle &#125;)</div><div class="line">//只有以 post 请求 第一个参数：请求路径的时候才会进来</div></pre></td></tr></table></figure>
-<p><strong>3.Request</strong></p>
-<ul>
-<li>req.url 获取请求路径</li>
-<li>req.method 获取请求方法</li>
-<li>req.headers    获取请求头</li>
-<li>req.hostname    获取请求主机名</li>
-<li>req.ip    获取Ip</li>
-<li>req.query 获取请求字符串</li>
-<li>req.body 获取主体</li>
-<li>req.params </li>
-<li>req.cookie </li>
-<li>req.path</li>
-<li>req.baseUrl</li>
-<li>req.originalUrl</li>
-</ul>
+<ol>
+<li>执行被加载模块中的代码 </li>
+<li>得到被加载模块中导出的接口对象</li>
+</ol>
 <hr>
-<h2 id="MongoDB"><a href="#MongoDB" class="headerlink" title="MongoDB"></a>MongoDB</h2><p>64 位版本启动 MongoDB 数据服务：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mongod --dbpath=C:\data\db</div><div class="line">mongod --dbpath C:\data\db</div></pre></td></tr></table></figure>
-<p>32 位版本使用下面的命令启动数据服务：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mongod --dbpath 数据存储路径 --journal --storageEngine=mmapv1</div></pre></td></tr></table></figure>
-<p>提示：如果不加 <code>--dbpath</code>, mongod 会自动使用 <code>执行命令所属磁盘根目录/data/db</code> 目录作为自己的数据存储路径，<br>所以，如果当前磁盘已经有了 <code>磁盘根路径\data\db</code> 目录了，可以省略 <code>--dbpath</code>。</p>
-<p>执行完上面的命令并成功开启 MongoDB 数据服务实例之后，就把该控制台最小化到一边就可以了，<br>千万不要关闭，否则关闭终端就是关闭数据库了，<br>如果对数据库的操作结束，可以打开该控制台通过 <strong>Ctrl + C</strong> 关闭或者直接关闭终端。</p>
-<h3 id="基本操作命令"><a href="#基本操作命令" class="headerlink" title="基本操作命令"></a>基本操作命令</h3><ul>
-<li><code>show dbs</code><ul>
-<li>查看当前服务实例上所有的数据库</li>
+<h2 id="异步编程思维"><a href="#异步编程思维" class="headerlink" title="异步编程思维"></a>异步编程思维</h2><ol>
+<li>清楚理解异步代码的执行过程</li>
+<li>能做到封装一个函数（内部由异步操作产生该函数的结果）</li>
+<li>所有的异步操作都在普通操作完成之后才会执行</li>
+<li>所有函数中通过异步操作得到的结果一定是通过callback回调函数来获取</li>
+</ol>
+<ul>
+<li>上层定义</li>
+<li>下层调用</li>
+</ul>
+<p>模块天生就是一个私有作用域,外部拿不到<br>对于同一个模块,被多次加载,会被缓存起来,以后再加载就直接读取缓存结果</p>
+<ul>
+<li>加载过的模块的导出接口会被放到缓存中</li>
+<li>模块的加载执行顺序,取决于require函数出现的位置</li>
+</ul>
+<h2 id="npm常用命令"><a href="#npm常用命令" class="headerlink" title="npm常用命令"></a>npm常用命令</h2><ul>
+<li><code>npm--help</code> 查看 npm 工具使用帮助</li>
+<li><code>npm--version</code> 查看版本<ul>
+<li><code>npm --global npm</code> 升级版本</li>
 </ul>
 </li>
-<li><code>use 数据库名称</code><ul>
-<li>这个命令表示切换到指定的数据库</li>
-<li>如果没有，也不会创建</li>
-<li>如果已经有了，则表示切换到这个数据库对该数据库进行操作</li>
-<li>连接到数据库之后，默认有一个变量叫做：db，终端默认把 db 赋值给了 test</li>
+<li><code>npm -h</code>需要查看的工具 查看工具的使用帮助</li>
+<li><code>npm uninstall [--save]</code> 卸载当前项目中某个包</li>
 </ul>
-</li>
-<li><code>db</code><ul>
-<li>查看当前所处的数据库</li>
+<h3 id="安装全局命令行工具"><a href="#安装全局命令行工具" class="headerlink" title="安装全局命令行工具"></a>安装全局命令行工具</h3><ul>
+<li>在node 中,还有一种包比较特殊,这种包被称为全局命令行工具,这种不是用在项目中辅助调用的,而是提供一个工具供你在终端使用</li>
 </ul>
-</li>
-<li><code>db.集合名称.insert(数据文档)</code></li>
-<li><code>show collections</code><ul>
-<li>查看当前数据库中所有的集合</li>
-</ul>
-</li>
-<li><code>db.集合名称.find()</code><ul>
-<li>查询指定集合中所有的数据</li>
-<li>可以通过 <code>db.集合名称.find().pretty()</code> 美化输出格式</li>
-<li>默认是查询所有，可以通过：<code>db.集合名称.find({查询条件})</code> 按条件查询集合中的数据</li>
-</ul>
-</li>
-<li><code>db.集合名称.update({更新条件}, {要更新的字段})</code><ul>
-<li>更新指定集合数据</li>
-</ul>
-</li>
-<li><code>db.集合名称.remove({删除条件})</code><ul>
-<li>删除指定集合中的数据</li>
+<p><code>npm install --global http-server</code></p>
+<ul>
+<li>nrm 多镜像缘切换<ul>
+<li>安装 <code>npm install --global nrm</code></li>
 </ul>
 </li>
 </ul>
+<h2 id="自动同步修改代码重启服务器-nodemon"><a href="#自动同步修改代码重启服务器-nodemon" class="headerlink" title="自动同步修改代码重启服务器 nodemon"></a>自动同步修改代码重启服务器 nodemon</h2><p>第一:安装<br><code>npm i -g nodemon</code><br>第二: 使用<br><code>node app.js 通过 nodemon app.js</code></p>
+<hr>
+<p>设置响应头部<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">res.writeHead(<span class="number">200</span>,&#123;</div><div class="line">	<span class="string">'Content-Type'</span>: <span class="string">'text/html; charset=utf-8'</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>文件操作路径</p>
+<ul>
+<li><p>在文件操作中,绝对路径无非就是两种形式:</p>
+<ul>
+<li><strong>c:/a/b/a.txt</strong> 绝对路径</li>
+<li><strong>a/b/a.txt</strong>  相对路径</li>
+</ul>
+</li>
+<li><p>相对路径</p>
+<ul>
+<li><strong>./data/a.txt</strong></li>
+</ul>
+</li>
+</ul>
+<p>这里的相对路径表示在哪里执行Node命令,相对路径就相对于谁</p>
+<p> <code>__filenmae 和 __dirname</code></p>
+<pre><code>+ __filenmae永远获取到的都是当前文件的绝对路径
++ __dirname永远获取到的都是当前文件所属目录的绝对路径
+</code></pre><p><code>__dirname + &#39;\\data.txt&#39;</code></p>
+<ul>
+<li>在windows上 ,路径分隔是反斜杠: <code>\</code></li>
+<li><p>可以利用path.sep属性获取当前操作系统的路径分隔符</p>
+<ul>
+<li><code>path.join(__dirname,&#39;../a.txt&#39;)</code> 将多个字符串拼接完整的路径 ‘../‘代表进入上一级</li>
+<li><code>path.basename</code> 获取有后缀名的文件</li>
+<li><code>path.dirname</code> 获取第一个路径的目录部分</li>
+<li><code>path.normalize(path)</code> 将一个非标准路径转换成标准路径</li>
+<li><code>path.resolve([...path])</code>  将一个路径转为动态的绝对路径,但是转出来的绝对路径还是相对于Node执行命令的终端位置</li>
+<li><p><code>path.parse(&#39;c:\\paht\\file.txt&#39;)</code> 路径转为对象</p>
+<ul>
+<li>对应<code>path.format({})</code></li>
+</ul>
+</li>
+<li><p>在node操作路径的时候,可以使用正斜杠作为路径操作符,因为Node在真正处理文件资源的时候,会自动转换</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="web路径"><a href="#web路径" class="headerlink" title="web路径"></a>web路径</h2><p>永远相对于当前页面的url路径 , url只是个标识, 关键在于html页面中的资源引用路径到底相对于什么<br>在 web 中,一切页面中的资源请求路径都相对于当前使用这个页面的</p>
+<blockquote>
+<ul>
+<li>link href </li>
+<li>img src </li>
+<li>script src </li>
+<li>iframe href</li>
+<li>a href</li>
+</ul>
+</blockquote>
+<h2 id="post-请求-node中获取数据"><a href="#post-请求-node中获取数据" class="headerlink" title="post 请求 node中获取数据"></a>post 请求 node中获取数据</h2><ul>
+<li><p>querystring.parse(data)  把查询字符串转换成对象</p>
+<ul>
+<li>参数传入: data = ‘name=aa&amp;age=18’</li>
+</ul>
+</li>
+<li><p>将表单的enctype 设置为multipart/form-data</p>
+</li>
+</ul>
+<p>awesome-名字  git搜索常用的插件</p>
 
       
 
@@ -405,7 +502,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2015/07/22/Express/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2016/05/10/Node/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -419,15 +516,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2015/07/28/都是一场梦/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          每个人都是一场梦
-        
-      </div>
-    </a>
   
+    <a href="/2015/08/16/愁诗/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">酱油诗</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -439,7 +532,7 @@
   
   <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="Express" data-title="Express的使用" data-url="http://yoursite.com/2015/07/22/Express/"></div>
+	<div class="ds-thread" data-thread-key="Node" data-title="node学习" data-url="http://yoursite.com/2016/05/10/Node/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

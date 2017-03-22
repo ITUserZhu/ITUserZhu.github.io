@@ -6,24 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Express的使用 | IT-Z前端之路</title>
+  <title>Archives: 2015/8 | IT-Z前端之路</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="基础+中间件
-数据库
-使用node操作数据">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Express的使用">
-<meta property="og:url" content="http://yoursite.com/2015/07/22/Express/index.html">
+  <meta name="description" content="never give up !!!">
+<meta property="og:type" content="website">
+<meta property="og:title" content="IT-Z前端之路">
+<meta property="og:url" content="http://yoursite.com/archives/2015/08/index.html">
 <meta property="og:site_name" content="IT-Z前端之路">
-<meta property="og:description" content="基础+中间件
-数据库
-使用node操作数据">
-<meta property="og:updated_time" content="2017-03-22T12:25:28.463Z">
+<meta property="og:description" content="never give up !!!">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Express的使用">
-<meta name="twitter:description" content="基础+中间件
-数据库
-使用node操作数据">
+<meta name="twitter:title" content="IT-Z前端之路">
+<meta name="twitter:description" content="never give up !!!">
   
     <link rel="alternative" href="/atom.xml" title="IT-Z前端之路" type="application/atom+xml">
   
@@ -166,299 +159,71 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Express" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      Express的使用
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2015" class="archive-year">2015</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2015/08/16/愁诗/" class="archive-article-date">
+  	<time datetime="2015-08-16T14:23:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-08-16</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2015/08/16/愁诗/">酱油诗</a>
     </h1>
   
 
-        
-        <a href="/2015/07/22/Express/" class="archive-article-date">
-  	<time datetime="2015-07-22T07:08:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-07-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>基础+中间件</li>
-<li>数据库</li>
-<li>使用node操作数据</li>
-</ul>
-<a id="more"></a>
-<hr>
-<ul>
-<li>Express 一个基于Nodejs快速web开发框架<ul>
-<li>做网站后台</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><p>中间件</p>
-<ul>
-<li>express 核心就是面向中间件编程</li>
-<li>app.use(function(req,res){//handle})中间件: 任意请求都会进来,不关心请求路径和请求方法</li>
-<li>app.use(route,function(req,res){//handle})中间件:只有该请求路径开头的才会进来执行<br>+app.get(‘请求路径’,function(req,res){})只有以get请求 第一个参数:请求路径<br>+app.post(‘请求路径’,function(req,res){})只有以post请求 第一个参数:请求路径</li>
-</ul>
-</li>
-<li><p>对于同一次请求,流通多个中间件都是同一个req,res对象    </p>
-</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">app.use(<span class="function"><span class="keyword">function</span>(<span class="params">req,res,next</span>)</span>&#123;</div><div class="line">	<span class="built_in">console</span>.log(<span class="number">11</span>)</div><div class="line">	next()</div><div class="line">&#125;)</div><div class="line"><span class="comment">//调用next()才会执行下一个被匹配的中间件</span></div><div class="line">app.use(<span class="function"><span class="keyword">function</span>(<span class="params">req,res</span>) </span>&#123;</div><div class="line">	<span class="built_in">console</span>.log(<span class="number">222</span>)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<h2 id="API"><a href="#API" class="headerlink" title="API"></a>API</h2><p><strong>1.express</strong> </p>
-<ul>
-<li>express()  得到一个实例app</li>
-<li>express.static()  方便地托管静态文件唯一中间件</li>
-<li>express.Router()    可使用 express.Router 类创建模块化、可挂载的路由句柄</li>
-</ul>
-<p><strong>2.Application</strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">app.get() </div><div class="line">app.post()</div></pre></td></tr></table></figure>
-<ul>
-<li>设置路由</li>
-<li>通过 app 调用对应的 get 或 post 方法</li>
-<li>根据不同的请求方法 + 请求路径，转发到具体的处理函数</li>
-<li>这里的路由中的第一个参数需要传入一个字符换：请求路径（pathname，不包含查询字符串）</li>
-<li>请求处理函数需要接收两个参数：req 和 res</li>
-<li>req：请求对象</li>
-<li>可以通过请求对象获取一些客户端的请求数据，例如请求 URL、请求方法、请求查询字符串 等数据</li>
-<li>req 也是在原来的基础之上，扩展添加了一些有用的方法或属性</li>
-<li>例如：req.query  res：响应对象</li>
-<li>可以给客户端发送响应数据</li>
-<li>Express 在基于原来的 res 基础之又提供了一些快捷便利的方法</li>
-<li>例如：res.redirect()</li>
-</ul>
-<ul>
-<li>app.listen() 监听 端口,启动服务器</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">app.use(function (req, res) &#123; // handle &#125;)</div><div class="line">//中间件：任何请求都会进来，不关心请求路径和请求方法</div><div class="line">app.use(&apos;请求路径&apos;, function (req, res) &#123; // handle &#125;) </div><div class="line">//中间件：只有该请求路径开头的才会进来执行</div><div class="line">app.get(&apos;请求路径&apos;, function (req, res) &#123; // handle &#125;) </div><div class="line">//只有以 get 请求 第一个参数：请求路径的时候才会进来</div><div class="line">app.post(&apos;请求路径&apos;, function (req, res) &#123; // handle &#125;)</div><div class="line">//只有以 post 请求 第一个参数：请求路径的时候才会进来</div></pre></td></tr></table></figure>
-<p><strong>3.Request</strong></p>
-<ul>
-<li>req.url 获取请求路径</li>
-<li>req.method 获取请求方法</li>
-<li>req.headers    获取请求头</li>
-<li>req.hostname    获取请求主机名</li>
-<li>req.ip    获取Ip</li>
-<li>req.query 获取请求字符串</li>
-<li>req.body 获取主体</li>
-<li>req.params </li>
-<li>req.cookie </li>
-<li>req.path</li>
-<li>req.baseUrl</li>
-<li>req.originalUrl</li>
-</ul>
-<hr>
-<h2 id="MongoDB"><a href="#MongoDB" class="headerlink" title="MongoDB"></a>MongoDB</h2><p>64 位版本启动 MongoDB 数据服务：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mongod --dbpath=C:\data\db</div><div class="line">mongod --dbpath C:\data\db</div></pre></td></tr></table></figure>
-<p>32 位版本使用下面的命令启动数据服务：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mongod --dbpath 数据存储路径 --journal --storageEngine=mmapv1</div></pre></td></tr></table></figure>
-<p>提示：如果不加 <code>--dbpath</code>, mongod 会自动使用 <code>执行命令所属磁盘根目录/data/db</code> 目录作为自己的数据存储路径，<br>所以，如果当前磁盘已经有了 <code>磁盘根路径\data\db</code> 目录了，可以省略 <code>--dbpath</code>。</p>
-<p>执行完上面的命令并成功开启 MongoDB 数据服务实例之后，就把该控制台最小化到一边就可以了，<br>千万不要关闭，否则关闭终端就是关闭数据库了，<br>如果对数据库的操作结束，可以打开该控制台通过 <strong>Ctrl + C</strong> 关闭或者直接关闭终端。</p>
-<h3 id="基本操作命令"><a href="#基本操作命令" class="headerlink" title="基本操作命令"></a>基本操作命令</h3><ul>
-<li><code>show dbs</code><ul>
-<li>查看当前服务实例上所有的数据库</li>
-</ul>
-</li>
-<li><code>use 数据库名称</code><ul>
-<li>这个命令表示切换到指定的数据库</li>
-<li>如果没有，也不会创建</li>
-<li>如果已经有了，则表示切换到这个数据库对该数据库进行操作</li>
-<li>连接到数据库之后，默认有一个变量叫做：db，终端默认把 db 赋值给了 test</li>
-</ul>
-</li>
-<li><code>db</code><ul>
-<li>查看当前所处的数据库</li>
-</ul>
-</li>
-<li><code>db.集合名称.insert(数据文档)</code></li>
-<li><code>show collections</code><ul>
-<li>查看当前数据库中所有的集合</li>
-</ul>
-</li>
-<li><code>db.集合名称.find()</code><ul>
-<li>查询指定集合中所有的数据</li>
-<li>可以通过 <code>db.集合名称.find().pretty()</code> 美化输出格式</li>
-<li>默认是查询所有，可以通过：<code>db.集合名称.find({查询条件})</code> 按条件查询集合中的数据</li>
-</ul>
-</li>
-<li><code>db.集合名称.update({更新条件}, {要更新的字段})</code><ul>
-<li>更新指定集合数据</li>
-</ul>
-</li>
-<li><code>db.集合名称.remove({删除条件})</code><ul>
-<li>删除指定集合中的数据</li>
-</ul>
-</li>
-</ul>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>有问题可以加我探讨<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/img/vxin.jpg">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技巧</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">思考</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/学习/" class="article-tag-list-link color3">学习</a>
+        			<a href="/categories/随笔/" class="article-tag-list-link color3">随笔</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2015/07/22/Express/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2015/07/28/都是一场梦/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          每个人都是一场梦
-        
-      </div>
-    </a>
   
   
-</nav>
-
-
-
-
-
-
-  
-  <div class="duoshuo">
-	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="Express" data-title="Express的使用" data-url="http://yoursite.com/2015/07/22/Express/"></div>
-	<!-- 多说评论框 end -->
-	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"ituserzhu"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-	<!-- 多说公共JS代码 end -->
-</div>
-
+    </div></section>
   
 
-
+    
 
 
           </div>
@@ -481,8 +246,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
