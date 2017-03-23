@@ -18,7 +18,7 @@
 <meta property="og:description" content="基础+中间件
 数据库
 使用node操作数据">
-<meta property="og:updated_time" content="2017-03-22T13:14:14.413Z">
+<meta property="og:updated_time" content="2017-03-23T01:16:03.743Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Express的使用">
 <meta name="twitter:description" content="基础+中间件
@@ -252,49 +252,6 @@
 <li>req.baseUrl</li>
 <li>req.originalUrl</li>
 </ul>
-<hr>
-<h2 id="MongoDB"><a href="#MongoDB" class="headerlink" title="MongoDB"></a>MongoDB</h2><p>64 位版本启动 MongoDB 数据服务：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mongod --dbpath=C:\data\db</div><div class="line">mongod --dbpath C:\data\db</div></pre></td></tr></table></figure>
-<p>32 位版本使用下面的命令启动数据服务：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mongod --dbpath 数据存储路径 --journal --storageEngine=mmapv1</div></pre></td></tr></table></figure>
-<p>提示：如果不加 <code>--dbpath</code>, mongod 会自动使用 <code>执行命令所属磁盘根目录/data/db</code> 目录作为自己的数据存储路径，<br>所以，如果当前磁盘已经有了 <code>磁盘根路径\data\db</code> 目录了，可以省略 <code>--dbpath</code>。</p>
-<p>执行完上面的命令并成功开启 MongoDB 数据服务实例之后，就把该控制台最小化到一边就可以了，<br>千万不要关闭，否则关闭终端就是关闭数据库了，<br>如果对数据库的操作结束，可以打开该控制台通过 <strong>Ctrl + C</strong> 关闭或者直接关闭终端。</p>
-<h3 id="基本操作命令"><a href="#基本操作命令" class="headerlink" title="基本操作命令"></a>基本操作命令</h3><ul>
-<li><code>show dbs</code><ul>
-<li>查看当前服务实例上所有的数据库</li>
-</ul>
-</li>
-<li><code>use 数据库名称</code><ul>
-<li>这个命令表示切换到指定的数据库</li>
-<li>如果没有，也不会创建</li>
-<li>如果已经有了，则表示切换到这个数据库对该数据库进行操作</li>
-<li>连接到数据库之后，默认有一个变量叫做：db，终端默认把 db 赋值给了 test</li>
-</ul>
-</li>
-<li><code>db</code><ul>
-<li>查看当前所处的数据库</li>
-</ul>
-</li>
-<li><code>db.集合名称.insert(数据文档)</code></li>
-<li><code>show collections</code><ul>
-<li>查看当前数据库中所有的集合</li>
-</ul>
-</li>
-<li><code>db.集合名称.find()</code><ul>
-<li>查询指定集合中所有的数据</li>
-<li>可以通过 <code>db.集合名称.find().pretty()</code> 美化输出格式</li>
-<li>默认是查询所有，可以通过：<code>db.集合名称.find({查询条件})</code> 按条件查询集合中的数据</li>
-</ul>
-</li>
-<li><code>db.集合名称.update({更新条件}, {要更新的字段})</code><ul>
-<li>更新指定集合数据</li>
-</ul>
-</li>
-<li><code>db.集合名称.remove({删除条件})</code><ul>
-<li>删除指定集合中的数据</li>
-</ul>
-</li>
-</ul>
 
       
 
@@ -334,11 +291,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技巧</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技巧</a>
         		</li>
       		
 		</ul>
@@ -539,11 +496,11 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">技巧</a>
+                <a href="javascript:void(0)" class="js-tag color3">学习</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">学习</a>
+                <a href="javascript:void(0)" class="js-tag color3">技巧</a>
               </li>
              
               <li class="article-tag-list-item">
